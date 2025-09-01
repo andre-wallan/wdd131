@@ -1,4 +1,4 @@
-/* Fonts */
+/* Fonts & Body */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -10,18 +10,19 @@ body {
 /* Header */
 header {
     background-color: #004080;
-    color: white;
+    color: #fff;
     padding: 1rem;
     text-align: center;
 }
 
 #course-title {
-    display: block;
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    display: block;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     display: flex;
@@ -32,47 +33,17 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.2s;
 }
 
 nav a:hover {
     color: #ffcc00;
 }
 
-/* Main */
-main {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.card {
-    background-color: white;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-/* Footer */
-footer {
-    background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-
-/* Main - grid layout for cards */
+/* Main & Card Grid */
 main {
     max-width: 1000px;
     margin: 2rem auto;
@@ -82,10 +53,11 @@ main {
     gap: 2rem;
 }
 
-/* Individual cards */
+/* Card Styles */
 .card {
-    background-color: white;
+    background-color: #fff;
     padding: 1rem;
+    margin-bottom: 0; /* handled by grid gap */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     border-radius: 10px;
     display: flex;
@@ -104,6 +76,7 @@ main {
     height: auto;
     border-radius: 5px;
     margin-bottom: 1rem;
+    display: block;
 }
 
 .card h2 {
@@ -114,4 +87,12 @@ main {
 .card p {
     text-align: center;
     line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
 }
