@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for proper document setup and SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Norway - the land of fjords, northern lights, and Viking heritage. Explore this beautiful Scandinavian country.">
+    <meta name="author" content="Andrew Allan Ssemanda">
+    <title>Norway - Land of Fjords</title>
+    
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="css/place.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Norway</h1>
+            <p class="subtitle">Land of Fjords and Northern Lights</p>
+        </div>
+    </header>
+
+    <!-- Hero Section with Responsive Images -->
+    <section class="hero">
+        <!-- Using picture element for responsive images with WebP format -->
+        <picture>
+            <!-- Mobile version (up to 768px) -->
+            <source media="(max-width: 768px)" 
+                    srcset="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop&auto=format&fm=webp&q=80">
+            <!-- Desktop version (769px and above) -->
+            <source media="(min-width: 769px)" 
+                    srcset="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&h=800&fit=crop&auto=format&fm=webp&q=80">
+            <!-- Fallback image -->
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&h=800&fit=crop&auto=format&fm=webp&q=80" 
+                 alt="Norwegian fjord landscape with mountains and water">
+        </picture>
+        
+        <!-- Hero overlay content -->
+        <div class="hero-overlay">
+            <div class="container">
+                <h2>Experience Norway's Natural Beauty</h2>
+                <p>From dramatic fjords to the magical northern lights, Norway offers breathtaking landscapes and rich cultural heritage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        <!-- Content Grid Layout -->
+        <div class="content-grid">
+            
+            <!-- About Section -->
+            <section class="about-section">
+                <h3>About Norway</h3>
+                <p>Norway is a Scandinavian country known for its stunning natural landscapes, including fjords, mountains, and the northern lights. The country has a rich Viking heritage and is famous for its high quality of life, progressive social policies, and commitment to environmental sustainability.</p>
+                
+                <p>With a population of about 5.4 million people, Norway is one of the world's most prosperous countries, largely due to its oil and gas resources. The capital city, Oslo, is a vibrant cultural center that perfectly blends modern architecture with historical landmarks.</p>
+                
+                <p>Norwegian culture emphasizes outdoor activities, with concepts like "friluftsliv" (outdoor life) being central to the national identity. The country is also known for its contributions to winter sports, literature, and music.</p>
+            </section>
+
+            <!-- Quick Facts Sidebar -->
+            <aside class="facts-section">
+                <h3>Quick Facts</h3>
+                <ul>
+                    <li><strong>Capital:</strong> Oslo</li>
+                    <li><strong>Population:</strong> 5.4 million</li>
+                    <li><strong>Language:</strong> Norwegian</li>
+                    <li><strong>Currency:</strong> Norwegian Krone (NOK)</li>
+                    <li><strong>Area:</strong> 385,207 km²</li>
+                    <li><strong>Government:</strong> Constitutional Monarchy</li>
+                    <li><strong>Famous For:</strong> Fjords, Northern Lights, Vikings</li>
+                    <li><strong>Best Time to Visit:</strong> May - September</li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- Weather Section -->
+        <section class="weather-section">
+            <h3>Current Weather in Oslo</h3>
+            <div class="weather-grid">
+                <div class="weather-item">
+                    <strong>Temperature</strong>
+                    <span id="temperature">5°C</span>
+                </div>
+                <div class="weather-item">
+                    <strong>Condition</strong>
+                    <span>Cloudy</span>
+                </div>
+                <div class="weather-item">
+                    <strong>Wind Speed</strong>
+                    <span id="wind-speed">8 km/h</span>
+                </div>
+                <div class="weather-item">
+                    <strong>Wind Chill</strong>
+                    <span id="windchill">Calculating...</span>
+                </div>
+                <div class="weather-item">
+                    <strong>Humidity</strong>
+                    <span>78%</span>
+                </div>
+                <div class="weather-item">
+                    <strong>Visibility</strong>
+                    <span>10 km</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="gallery">
+            <h3>Explore Norway</h3>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&auto=format&fm=webp&q=75" 
+                         alt="Aurora Borealis (Northern Lights) over Norwegian landscape">
+                    <figcaption>Northern Lights</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&auto=format&fm=webp&q=75" 
+                         alt="Traditional Norwegian stave church">
+                    <figcaption>Stave Church</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1551522435-a13afa10f103?w=400&h=300&fit=crop&auto=format&fm=webp&q=75" 
+                         alt="Lofoten Islands scenic view">
+                    <figcaption>Lofoten Islands</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1610395237759-37b5d178ed77?w=400&h=300&fit=crop&auto=format&fm=webp&q=75" 
+                         alt="Bergen colorful waterfront houses">
+                    <figcaption>Bergen Waterfront</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Norway Travel Guide</p>
+            <p>Last modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript file with defer attribute -->
+    <script src="scripts/place.js" defer></script>
+</body>
+</html>

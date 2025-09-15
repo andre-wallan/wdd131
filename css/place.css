@@ -1,0 +1,495 @@
+/* 
+   CSS for Norway Country Page
+   Using Norwegian flag colors: Red (#ED1C24), White (#FFFFFF), Blue (#002D72)
+*/
+
+/* CSS Global Variables */
+:root {
+    --primary-color: #ED1C24;        /* Norwegian flag red */
+    --secondary-color: #002D72;      /* Norwegian flag blue */
+    --accent-color: #0066CC;         /* Lighter blue for accents */
+    --text-primary: #2C3E50;         /* Dark text color */
+    --text-secondary: #7F8C8D;       /* Light text color */
+    --background-light: #F8F9FA;     /* Light background */
+    --white: #FFFFFF;
+    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    
+    /* Typography variables */
+    --font-primary: 'Arial', 'Helvetica', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-primary);
+    background-color: var(--white);
+}
+
+/* Container for consistent max-width and centering */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: var(--shadow-medium);
+}
+
+header h1 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 70vh;
+    min-height: 400px;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero picture,
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(237, 28, 36, 0.7) 0%,
+        rgba(0, 45, 114, 0.6) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-overlay h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-overlay p {
+    color: var(--white);
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+}
+
+/* Main Content Area */
+main {
+    padding: 3rem 0;
+}
+
+/* Content Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* About Section */
+.about-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+.about-section h3 {
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Facts Section (Sidebar) */
+.facts-section {
+    background: var(--background-light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    height: fit-content;
+}
+
+.facts-section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.facts-section ul {
+    list-style: none;
+}
+
+.facts-section li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #E0E6ED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.facts-section li:last-child {
+    border-bottom: none;
+}
+
+.facts-section strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Weather Section */
+.weather-section {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    margin-bottom: 3rem;
+}
+
+.weather-section h3 {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Pseudo-element for weather icon in large view */
+.weather-section h3::after {
+    content: "🌤️";
+    margin-left: 0.5rem;
+    font-size: 1.2em;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.weather-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.weather-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.weather-item strong {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.weather-item span {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#windchill {
+    color: #FFD700; /* Gold color for windchill */
+}
+
+/* Gallery Section */
+.gallery {
+    margin-bottom: 2rem;
+}
+
+.gallery h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.gallery figure:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery figure:hover img {
+    transform: scale(1.05);
+}
+
+.gallery figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: var(--white);
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background: var(--text-primary);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+    opacity: 0.8;
+}
+
+/* Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
+    /* Adjust typography for mobile */
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-overlay h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-overlay p {
+        font-size: 1rem;
+    }
+    
+    /* Hero section adjustments */
+    .hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    /* Content grid becomes single column */
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Reduce padding on mobile */
+    .about-section,
+    .facts-section,
+    .weather-section {
+        padding: 1.5rem;
+    }
+    
+    main {
+        padding: 2rem 0;
+    }
+    
+    /* Weather section mobile adjustments */
+    .weather-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 0.75rem;
+    }
+    
+    .weather-item {
+        padding: 1rem;
+    }
+    
+    /* Remove emoji and add SVG icon for mobile */
+    .weather-section h3::after {
+        content: "";
+    }
+    
+    .weather-section h3::before {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='24' height='24'%3E%3Cpath d='M6.5 20q-2.28 0-3.89-1.57T1 14.5q0-1.95 1.17-3.48t3.02-1.9q.5-2.32 2.38-3.72T12 4q2.78 0 4.65 2.07t1.62 4.81q1.75.2 2.74 1.5t.99 2.87q0 1.88-1.31 3.12T17.5 20H6.5Z'/%3E%3C/svg%3E");
+        margin-right: 0.5rem;
+        vertical-align: middle;
+    }
+    
+    /* Gallery adjustments */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .gallery img {
+        height: 200px;
+    }
+}
+
+/* Tablet Styles (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .weather-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Desktop Styles (1200px+) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero {
+        height: 80vh;
+        max-height: 700px;
+    }
+    
+    .hero-overlay h2 {
+        font-size: 3rem;
+    }
+    
+    .hero-overlay p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.3);
+        --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Ensure adequate color contrast */
+.weather-item strong {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.facts-section li {
+    color: var(--text-primary);
+}
