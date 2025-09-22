@@ -54,21 +54,21 @@ const temples = [
     location: "Tokyo, Japan",
     dedicated: "1980, October, 27",
     area: 53512,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo-japan-temple.jpg"
+    imageUrl: "https://newsroom.churchofjesuschrist.org/media/285x380/Tokyo-Japan-Temple-Pic-20-copy-759x1024.jpg"
   },
   {
     templeName: "Salt Lake City Utah",
     location: "Salt Lake City, Utah, United States",
     dedicated: "1893, April, 6",
     area: 253000,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city/400x250/salt-lake-city-temple.jpg"
+    imageUrl: "https://www.legalreader.com/wp-content/uploads/2023/09/2015-09-25_18_39_05_South_and_west_sides_of_the_Salt_Lake_Temple_of_the_Church_of_Jesus_Christ_of_Latter_Day_Saints_Mormon_Church_in_Salt_Lake_City_Utah.jpg"
   },
   {
     templeName: "Paris France",
     location: "Le Chesnay, France",
     dedicated: "2017, May, 21",
     area: 15350,
-    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple.jpg"
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-2055.jpg"
   }
 ];
 
