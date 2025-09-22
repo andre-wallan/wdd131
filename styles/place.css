@@ -420,11 +420,6 @@ footer p:last-child {
         padding: 1rem;
     }
     
-    /* Remove emoji and add SVG icon for mobile with high contrast */
-    .weather-section h3::after {
-        content: "";
-    }
-    
     .weather-section h3::before {
         content: "";
         margin-right: 0.5rem;
