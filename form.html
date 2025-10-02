@@ -3,93 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Review</title>
-  <link rel="stylesheet" href="css/review.css">
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>Product Review</h1>
-    <div class="header-bar"></div>
+    <h1>Thank You for Your Review!</h1>
   </header>
 
   <main>
-    <form method="get" action="review.html" id="productReviewForm">
-
-      <!-- Product Name -->
-      <label for="product">Product Name</label>
-      <select id="product" name="product" required>
-        <option value="" disabled selected>Choose a Product ...</option>
-        <option value="Vocational High">Vocational High</option>
-        <option value="Tech Academy">Tech Academy</option>
-        <option value="STEM Institute">STEM Institute</option>
-        <option value="Arts College">Arts College</option>
-      </select>
-
-      <!-- Overall Rating -->
-      <label>Overall Rating</label>
-      <div class="rating-options">
-        <input type="radio" id="star1" name="rating" value="1" required>
-        <label for="star1">★</label>
-
-        <input type="radio" id="star2" name="rating" value="2">
-        <label for="star2">★★</label>
-
-        <input type="radio" id="star3" name="rating" value="3">
-        <label for="star3">★★★</label>
-
-        <input type="radio" id="star4" name="rating" value="4">
-        <label for="star4">★★★★</label>
-
-        <input type="radio" id="star5" name="rating" value="5">
-        <label for="star5">★★★★★</label>
-      </div>
-
-      <!-- Date of Installation -->
-      <label for="installDate">Date of Installation</label>
-      <input type="date" id="installDate" name="installDate" required>
-
-      <!-- Useful Features -->
-      <label>
-        Which features did you find useful in the product?<br>
-        <span class="note">(Check all that apply)</span>
-      </label>
-      <div class="checkbox-group">
-        <input type="checkbox" id="durability" name="features" value="Durability">
-        <label for="durability">Durability</label><br>
-
-        <input type="checkbox" id="ease" name="features" value="Ease of Use">
-        <label for="ease">Ease of Use</label><br>
-
-        <input type="checkbox" id="performance" name="features" value="Performance">
-        <label for="performance">Performance</label><br>
-
-        <input type="checkbox" id="design" name="features" value="Design">
-        <label for="design">Design</label>
-      </div>
-
-      <!-- Written Review -->
-      <label for="writtenReview">Written Review <span class="note">(Optional)</span></label>
-      <textarea id="writtenReview" name="writtenReview" rows="4" cols="50"></textarea>
-
-      <!-- User Name -->
-      <label for="userName">Your Name <span class="note">(Optional)</span></label>
-      <input type="text" id="userName" name="userName">
-
-      <!-- Submit Button -->
-      <button type="submit" class="submit-btn">Post Review</button>
-    </form>
+    <p>Your review has been successfully submitted.</p>
+    <p id="counter"></p>
   </main>
 
   <footer>
-    <div class="footer-bar">
-      <p>
-        &copy;2024 🌸 Andrew Allan Ssemanda 🌸<br>
-        Uganda<br>
-        Last Modification: 02/26/2024 13:56:10
-      </p>
-    </div>
+    <p>&copy; 2025 Vocational School Portal</p>
   </footer>
 
-  <script src="js/review.js"></script>
+  <script>
+    // Retrieve counter from localStorage
+    let reviewCount = localStorage.getItem('reviewCount') || 0;
+    reviewCount = parseInt(reviewCount) + 1;
+    localStorage.setItem('reviewCount', reviewCount);
+
+    // Display counter
+    document.getElementById('counter').textContent = `You have submitted ${reviewCount} review(s).`;
+  </script>
 </body>
 </html>
