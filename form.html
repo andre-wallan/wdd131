@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>School Review Form</title>
+  <title>Product Review</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>School Review Form</h1>
+    <h1>Product Review</h1>
   </header>
 
   <main>
-    <form method="get" action="review.html" id="schoolReviewForm">
+    <form method="get" action="review.html" id="productReviewForm">
 
-      <!-- School Name -->
-      <label for="school">School Name:</label>
-      <select id="school" name="school" required>
-        <option value="" disabled selected>Select a School ...</option>
+      <!-- Product Name -->
+      <label for="product">Product Name</label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Choose a Product ...</option>
         <option value="Vocational High">Vocational High</option>
         <option value="Tech Academy">Tech Academy</option>
         <option value="STEM Institute">STEM Institute</option>
@@ -25,60 +25,61 @@
       </select>
 
       <!-- Overall Rating -->
-      <fieldset>
-        <legend>Overall Rating:</legend>
+      <label>Overall Rating</label>
+      <div style="margin-bottom: 1em;"></div>
         <input type="radio" id="star1" name="rating" value="1" required>
-        <label for="star1">☆ 1</label>
-
+        <label for="star1">★</label>
         <input type="radio" id="star2" name="rating" value="2">
-        <label for="star2">☆ 2</label>
-
+        <label for="star2">★★</label>
         <input type="radio" id="star3" name="rating" value="3">
-        <label for="star3">☆ 3</label>
-
+        <label for="star3">★★★</label>
         <input type="radio" id="star4" name="rating" value="4">
-        <label for="star4">☆ 4</label>
-
+        <label for="star4">★★★★</label>
         <input type="radio" id="star5" name="rating" value="5">
-        <label for="star5">☆ 5</label>
-      </fieldset>
+        <label for="star5">★★★★★</label>
+      </div>
 
-      <!-- Date of Enrollment -->
-      <label for="enrollDate">Date of Enrollment:</label>
-      <input type="date" id="enrollDate" name="enrollDate" required>
+      <!-- Date of Installation -->
+      <label for="installDate">Date of Installation</label>
+      <input type="date" id="installDate" name="installDate" placeholder="mm/dd/yyyy" required>
 
-      <!-- Useful Aspects -->
-      <fieldset>
-        <legend>Positive Aspects:</legend>
-        <input type="checkbox" id="aspect1" name="aspects" value="Quality Teaching">
-        <label for="aspect1">Quality Teaching</label>
-
-        <input type="checkbox" id="aspect2" name="aspects" value="Facilities">
-        <label for="aspect2">Facilities</label>
-
-        <input type="checkbox" id="aspect3" name="aspects" value="Extracurricular Activities">
-        <label for="aspect3">Extracurricular Activities</label>
-
-        <input type="checkbox" id="aspect4" name="aspects" value="Support Services">
-        <label for="aspect4">Support Services</label>
-      </fieldset>
+      <!-- Useful Features -->
+      <label>Which features did you find useful in the product?<br>
+        <span style="font-size:small;"><em>(Check all that apply)</em></span>
+      </label>
+      <div>
+        <input type="checkbox" id="durability" name="features" value="Durability">
+        <label for="durability">Durability</label><br>
+        <input type="checkbox" id="ease" name="features" value="Ease of Use">
+        <label for="ease">Ease of Use</label><br>
+        <input type="checkbox" id="performance" name="features" value="Performance">
+        <label for="performance">Performance</label><br>
+        <input type="checkbox" id="design" name="features" value="Design">
+        <label for="design">Design</label>
+      </div>
 
       <!-- Written Review -->
-      <label for="review">Your Review:</label>
-      <textarea id="review" name="review" rows="4" cols="50" placeholder="Share your experience..."></textarea>
+      <label for="writtenReview">Written Review <span style="font-size:small;">(Optional)</span></label>
+      <textarea id="writtenReview" name="writtenReview" rows="4" cols="50"></textarea>
 
       <!-- User Name -->
-      <label for="userName">Your Name (optional):</label>
+      <label for="userName">Your Name <span style="font-size:small;">(Optional)</span></label>
       <input type="text" id="userName" name="userName">
 
       <!-- Submit Button -->
-      <input type="submit" value="Submit Review">
+      <button type="submit" style="width:100%;padding:0.5em;font-size:1.1em;">Post Review</button>
 
     </form>
   </main>
 
   <footer>
-    <p>&copy; 2025 Vocational School Portal</p>
+    <div style="text-align:center;background:#3c1832;color:#fff;padding:1em 0;">
+      <p>
+        &copy;2024 <span style="color:#e75480;">&#127800;</span> Andrew Allan Ssemanda <span style="color:#e75480;">&#127800;</span><br>
+        Uganda<br>
+        Last Modification: 02/26/2024 13:56:10
+      </p>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>
