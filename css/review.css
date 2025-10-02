@@ -1,0 +1,113 @@
+/* General Page Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: #3c1832;
+  color: #fff;
+  padding: 1em 0;
+}
+
+.header-bar {
+  height: 4px;
+  background: #e75480;
+  width: 80%;
+  margin: 0.5em auto 0;
+  border-radius: 2px;
+}
+
+main {
+  max-width: 600px;
+  margin: 2em auto;
+  background: #fff;
+  padding: 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Form Styles */
+form label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.6em;
+  margin-top: 0.3em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+/* Rating Stars */
+.rating-options {
+  margin: 0.5em 0 1em;
+}
+.rating-options input {
+  margin-right: 0.3em;
+}
+.rating-options label {
+  margin-right: 0.8em;
+  cursor: pointer;
+}
+
+/* Notes */
+.note {
+  font-size: small;
+  font-style: italic;
+  color: #666;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 0.7em;
+  font-size: 1.1em;
+  background: #3c1832;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1.2em;
+  transition: background 0.3s;
+}
+.submit-btn:hover {
+  background: #5a2650;
+}
+
+/* Confirmation Message */
+#confirmationMessage {
+  margin-top: 1.5em;
+  padding: 1em;
+  border-radius: 6px;
+  background: #e6ffe6;
+  color: #006600;
+  font-weight: bold;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  margin-top: 2em;
+}
+.footer-bar {
+  text-align: center;
+  background: #3c1832;
+  color: #fff;
+  padding: 1em 0;
+}
