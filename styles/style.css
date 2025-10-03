@@ -1,4 +1,6 @@
+/* General Page Styles */
 body {
+
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -11,23 +13,30 @@ header {
   background: #3c1832;
   color: #fff;
   padding: 1em 0;
-  width: 100%;
+}
+
+.header-bar {
+  height: 4px;
+  background: #e75480;
+  width: 80%;
+  margin: 0.5em auto 0;
+  border-radius: 2px;
 }
 
 main {
-  max-width: 340px;
+  max-width: 600px;
   margin: 2em auto;
-  background: #ded3df;
-  padding: 1.5em 1em;
+  background: #fff;
+  padding: 1.5em;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Form Styles */
 form label {
   display: block;
   margin-top: 1em;
   font-weight: bold;
-  margin-bottom: 0.3em;
 }
 
 select,
@@ -40,68 +49,45 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;
-  background: #fff;
 }
 
+/* Rating Stars */
 .rating-options {
   margin: 0.5em 0 1em;
-  display: flex;
-  align-items: center;
-  gap: 1em;
 }
 .rating-options input {
   margin-right: 0.3em;
 }
 .rating-options label {
-  margin-right: 0.2em;
+  margin-right: 0.8em;
   cursor: pointer;
-  font-size: 1.2em;
 }
 
+/* Notes */
 .note {
   font-size: small;
   font-style: italic;
   color: #666;
-  margin-bottom: 0.5em;
 }
 
+/* Submit Button */
 .submit-btn {
   width: 100%;
   padding: 0.7em;
   font-size: 1.1em;
-  background: #fff;
-  color: #222;
-  border: 2px solid #3c1832;
+  background: #3c1832;
+  color: #fff;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   margin-top: 1.2em;
-  transition: background 0.3s, color 0.3s;
-  font-weight: bold;
+  transition: background 0.3s;
 }
 .submit-btn:hover {
-  background: #ded3df;
-  color: #3c1832;
+  background: #5a2650;
 }
 
-footer {
-  margin-top: 2em;
-  width: 100%;
-}
-
-.footer-bar {
-  text-align: center;
-  background: #3c1832;
-  color: #fff;
-  padding: 0.7em 0;
-  font-size: 1em;
-  border-radius: 0 0 8px 8px;
-}
-
-.footer-bar .footer-icon {
-  color: #e75480;
-  margin: 0 0.2em;
-}
-
+/* Confirmation Message */
 #confirmationMessage {
   margin-top: 1.5em;
   padding: 1em;
@@ -116,11 +102,13 @@ footer {
   display: none;
 }
 
-/* Checkbox group spacing */
-.form-checkbox-group {
-  margin-bottom: 1em;
+/* Footer */
+footer {
+  margin-top: 2em;
 }
-.form-checkbox-group label {
-  font-weight: normal;
-  margin-left: 0.3em;
+.footer-bar {
+  text-align: center;
+  background: #3c1832;
+  color: #fff;
+  padding: 1em 0;
 }
