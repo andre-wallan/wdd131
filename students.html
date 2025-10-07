@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students - Vocational School Portal</title>
+  <link rel="stylesheet" href="styles/project.css">
+  <link rel="stylesheet" href="styles/checklist.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="project.html" class="brand">Vocational School</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="project.html">Home</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>Student Project Checklist</h1>
+    <p>Track your progress on your Vocational School Portal project</p>
+  </header>
+
+  <!-- Checklist Section -->
+  <main>
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+    <p id="progress-text">0% Complete</p>
+
+    <ul id="checklist">
+      <li><label><input type="checkbox"> Original work and cited references included</label></li>
+      <li><label><input type="checkbox"> Minimum 3 pages with common navigation</label></li>
+      <li><label><input type="checkbox"> Responsive design implemented</label></li>
+      <li><label><input type="checkbox"> Valid HTML and CSS</label></li>
+      <li><label><input type="checkbox"> Optimized images and lazy loading</label></li>
+      <li><label><input type="checkbox"> Functional HTML form</label></li>
+      <li><label><input type="checkbox"> JavaScript with multiple functions</label></li>
+      <li><label><input type="checkbox"> DOM interaction and events</label></li>
+      <li><label><input type="checkbox"> Conditional logic used</label></li>
+      <li><label><input type="checkbox"> Objects, arrays, and array methods implemented</label></li>
+      <li><label><input type="checkbox"> Template literals used</label></li>
+      <li><label><input type="checkbox"> localStorage used</label></li>
+      <li><label><input type="checkbox"> No spelling or grammatical errors</label></li>
+      <li><label><input type="checkbox"> Hosted on GitHub Pages</label></li>
+    </ul>
+
+    <div class="buttons">
+      <button id="saveBtn">Save Progress</button>
+      <button id="resetBtn">Reset Progress</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Vocational School. All rights reserved.</p>
+    <p><a href="references.html">References</a></p>
+  </footer>
+
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/checklist.js"></script>
+</body>
+</html>
