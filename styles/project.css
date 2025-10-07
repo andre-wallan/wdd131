@@ -1,158 +1,74 @@
 /* ===========================
-    1. Reset & Base Styles
+   0. Global Styles
 =========================== */
 * {
-     box-sizing: border-box;
-     margin: 0;
-     padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-     font-family: 'Segoe UI', Arial, sans-serif;
-     line-height: 1.7;
-     background-color: #f4f4f4;
-     color: #333;
-     min-height: 100vh;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* ===========================
-    2. Layout Containers
+   1. Navigation Bar
 =========================== */
-main {
-     max-width: 1200px;
-     margin: 2rem auto;
-     padding: 0 1rem;
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: 2rem;
+nav {
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-section {
-     background: #fff;
-     padding: 2rem 1.5rem;
-     border-radius: 8px;
-     box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-     transition: box-shadow 0.2s;
+nav a {
+    color: #fff;
+    margin-left: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-section:hover {
-     box-shadow: 0 4px 16px rgba(44,62,80,0.15);
+nav a:hover,
+nav a:focus {
+    color: #f1c40f;
 }
 
-section h2 {
-     margin-bottom: 1rem;
-     color: #2c3e50;
-     font-size: 1.5rem;
-     font-weight: 600;
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* ===========================
-    3. Navbar
+   2. Hero Section
 =========================== */
-.navbar {
-     background-color: #2c3e50;
-     color: #fff;
-     padding: 0.75rem 1rem;
-     box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-     position: sticky;
-     top: 0;
-     z-index: 100;
+.hero-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
-.nav-container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     max-width: 1200px;
-     margin: 0 auto;
-     position: relative;
-}
-
-.brand {
-     font-size: 2rem;
-     font-weight: bold;
-     text-decoration: none;
-     color: #fff;
-     letter-spacing: 1px;
-}
-
-.nav-links {
-     list-style: none;
-     display: flex;
-     gap: 1.2rem;
-}
-
-.nav-links li a {
-     color: #fff;
-     text-decoration: none;
-     padding: 0.6rem 1rem;
-     border-radius: 6px;
-     transition: background 0.3s, color 0.3s;
-     font-size: 1.05rem;
-}
-
-.nav-links li a:hover,
-.nav-links li a:focus {
-     background-color: #34495e;
-     color: #f1c40f;
-     outline: none;
-}
-
-.nav-toggle {
-     display: none;
-     font-size: 2.2rem;
-     background: none;
-     border: none;
-     color: #fff;
-     cursor: pointer;
-     margin-left: 1rem;
-}
-
-/* ===========================
-    4. Hero Section
-=========================== */
-.hero {
-     background: linear-gradient(rgba(44,62,80,0.6), rgba(44,62,80,0.6)), url('images/hero-small.jpg') center/cover no-repeat;
-     color: #fff;
-     padding: 5rem 1rem 3rem 1rem;
-     text-align: center;
-     min-height: 350px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-}
-
-.hero-content h1 {
-     font-size: 3rem;
-     margin-bottom: 1rem;
-     font-weight: 700;
-     letter-spacing: 2px;
-}
-
-.hero-content p {
-     font-size: 1.3rem;
-     max-width: 600px;
-     margin: 0 auto;
-     opacity: 0.95;
-}
-
-/* ===========================
-    5. Images
-=========================== */
-/* ===========================
-   hero Image
-=========================== */
 .hero-large {
     width: 100%;
     max-height: 600px;
-    object-fit: cover;           /* ensures full coverage without distortion */
+    object-fit: cover;
     display: block;
     margin: 0 auto;
     border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* subtle shadow for depth */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* Optional hero text overlay */
 .hero-text {
     position: absolute;
     top: 50%;
@@ -166,27 +82,32 @@ section h2 {
 }
 
 /* ===========================
-   2. News / Students / Gallery Images
+   3. News / Gallery Section
 =========================== */
+.news, .gallery {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
 .responsive-image {
     width: 100%;
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 1rem 0;
     border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 .responsive-image:hover {
     transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 /* ===========================
-   3. Lazy Loading Smooth Fade-In
+   4. Lazy Loading
 =========================== */
 img[loading="lazy"] {
     opacity: 0;
@@ -198,7 +119,26 @@ img[loading="lazy"].loaded {
 }
 
 /* ===========================
-   4. Footer
+   5. Buttons
+=========================== */
+button {
+    padding: 0.6rem 1.2rem;
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+    background-color: #e0b90f;
+    outline: none;
+}
+
+/* ===========================
+   6. Footer
 =========================== */
 footer {
     text-align: center;
@@ -223,8 +163,18 @@ footer a:focus {
 }
 
 /* ===========================
-   5. Responsive Adjustments
+   7. Responsive Adjustments
 =========================== */
+@media screen and (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav a {
+        margin: 0.5rem 0;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .hero-large {
         max-height: 400px;
@@ -235,8 +185,9 @@ footer a:focus {
         padding: 0 1rem;
     }
 
-    .responsive-image {
-        margin: 0.8rem 0;
+    .news, .gallery {
+        padding: 1rem;
+        gap: 1rem;
     }
 }
 
@@ -244,95 +195,7 @@ footer a:focus {
     .hero-text {
         font-size: 1.5rem;
     }
-}
-
-/* ===========================
-    7. Responsive Styles
-=========================== */
-@media screen and (max-width: 900px) {
-     main {
-          grid-template-columns: 1fr;
-          gap: 1.5rem;
-     }
-}
-
-@media screen and (max-width: 768px) {
-     .nav-toggle {
-          display: block;
-     }
-
-     .nav-links {
-          flex-direction: column;
-          position: absolute;
-          top: 60px;
-          right: 0;
-          background-color: #2c3e50;
-          width: 220px;
-          transform: translateX(100%);
-          transition: transform 0.3s ease;
-          padding: 1.2rem 1rem;
-          border-radius: 0 0 0 12px;
-          box-shadow: 0 4px 16px rgba(44,62,80,0.15);
-          z-index: 99;
-     }
-
-     .nav-links.show {
-          transform: translateX(0);
-     }
-
-     .nav-links li {
-          margin-bottom: 0.8rem;
-     }
-
-     .nav-links li:last-child {
-          margin-bottom: 0;
-     }
-
-     .brand {
-          font-size: 1.6rem;
-     }
-
-     .navbar {
-          padding: 0.75rem 0.5rem;
-     }
-
-     .hero-content h1 {
-          font-size: 2.2rem;
-     }
-
-     .hero-content p {
-          font-size: 1.1rem;
-     }
-
-     main {
-          padding: 0 0.5rem;
-     }
-
-     section {
-          padding: 1.2rem 0.8rem;
-     }
-}
-
-@media screen and (max-width: 500px) {
-     .hero {
-          padding: 3rem 0.5rem 2rem 0.5rem;
-          min-height: 220px;
-     }
-
-     .hero-content h1 {
-          font-size: 1.5rem;
-     }
-
-     .hero-content p {
-          font-size: 1rem;
-     }
-
-     section h2 {
-          font-size: 1.1rem;
-     }
-
-     footer {
-          font-size: 0.95rem;
-          padding: 0.8rem;
-     }
+    button {
+        width: 100%;
+    }
 }
