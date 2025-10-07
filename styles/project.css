@@ -98,6 +98,43 @@ body {
     opacity: 0.95;
 }
 
+/* Hero Image */
+.hero-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;      /* Ensure the image covers the container */
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+/* News / Students / Gallery Images */
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;           /* Maintain aspect ratio */
+  display: block;
+  margin: 1rem 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect for images */
+.responsive-image:hover {
+  transform: scale(1.03);
+}
+
+/* Lazy loading style placeholder (optional) */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
 /* Main Content */
 main {
     max-width: 1200px;
