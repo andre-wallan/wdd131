@@ -33,21 +33,36 @@ nav {
     z-index: 1000;
 }
 
-nav a {
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #fff;
-    margin-left: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li a {
+    color: #fff;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-nav a:hover,
-nav a:focus {
+.nav-links li a:hover,
+.nav-links li a:focus {
     color: #f1c40f;
 }
 
-.nav-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 /* ===========================
@@ -64,9 +79,6 @@ nav a:focus {
     max-height: 600px;
     object-fit: cover;
     display: block;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .hero-text {
@@ -82,20 +94,18 @@ nav a:focus {
 }
 
 /* ===========================
-   3. News / Gallery Section
+   3. News Section
 =========================== */
-.news, .gallery {
-    padding: 2rem;
+.news {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
+    padding: 2rem 2rem 0;
 }
 
 .responsive-image {
     width: 100%;
-    max-width: 100%;
     height: auto;
-    display: block;
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -107,7 +117,24 @@ nav a:focus {
 }
 
 /* ===========================
-   4. Lazy Loading
+   4. Programs & Student Resources
+=========================== */
+section {
+    padding: 2rem;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+/* ===========================
+   5. Lazy Loading
 =========================== */
 img[loading="lazy"] {
     opacity: 0;
@@ -116,25 +143,6 @@ img[loading="lazy"] {
 
 img[loading="lazy"].loaded {
     opacity: 1;
-}
-
-/* ===========================
-   5. Buttons
-=========================== */
-button {
-    padding: 0.6rem 1.2rem;
-    background-color: #f1c40f;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-button:hover,
-button:focus {
-    background-color: #e0b90f;
-    outline: none;
 }
 
 /* ===========================
@@ -163,15 +171,17 @@ footer a:focus {
 }
 
 /* ===========================
-   7. Responsive Adjustments
+   7. Responsive Design
 =========================== */
 @media screen and (max-width: 1024px) {
-    nav {
+    .nav-links {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 0.5rem;
+        display: none; /* will toggle with JS */
     }
-    nav a {
-        margin: 0.5rem 0;
+
+    .nav-toggle {
+        display: block;
     }
 }
 
@@ -185,17 +195,13 @@ footer a:focus {
         padding: 0 1rem;
     }
 
-    .news, .gallery {
+    section {
         padding: 1rem;
-        gap: 1rem;
     }
 }
 
 @media screen and (max-width: 480px) {
     .hero-text {
         font-size: 1.5rem;
-    }
-    button {
-        width: 100%;
     }
 }

@@ -10,7 +10,7 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="project.html" class="brand">Vocational School</a>
+      <a href="project.html" class="nav-logo">Vocational School</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="project.html">Home</a></li>
@@ -21,9 +21,10 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="hero">
-    <div class="hero-content">
+  <!-- Hero Section -->
+  <header class="hero-container">
+    <img src="images/hero-large.jpg" alt="Vocational School Hero" class="hero-large" loading="lazy">
+    <div class="hero-text">
       <h1>Welcome to Our Vocational School</h1>
       <p>Empowering students with practical skills for the future.</p>
     </div>
@@ -31,18 +32,18 @@
 
   <!-- Main Content -->
   <main>
+    <!-- News & Events -->
     <section>
       <h2>News & Events</h2>
       <p>Stay updated with the latest happenings and announcements in our school.</p>
 
-<img src="images/hero-large.jpg" alt="Vocational School Hero" width="1200" height="600" loading="lazy">
-<section class="news">
-  <img src="images/news1.jpg" alt="Workshop Event" loading="lazy">
-  <img src="images/news2.jpg" alt="Graduation Ceremony" loading="lazy">
-</section>
-
+      <section class="news">
+        <img src="images/news1.jpg" alt="Workshop Event" class="responsive-image" loading="lazy">
+        <img src="images/news2.jpg" alt="Graduation Ceremony" class="responsive-image" loading="lazy">
+      </section>
     </section>
 
+    <!-- Programs -->
     <section>
       <h2>Programs</h2>
       <ul>
@@ -59,6 +60,7 @@
       </ul>
     </section>
 
+    <!-- Student Resources -->
     <section>
       <h2>Student Resources</h2>
       <p>Access report cards, attendance records, and other interactive tools.</p>
@@ -71,6 +73,18 @@
     <p><a href="references.html">References</a></p>
   </footer>
 
+  <!-- Navigation Toggle Script -->
   <script src="scripts/nav.js"></script>
+  <!-- Lazy loading fade-in -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+      lazyImages.forEach(img => {
+        img.addEventListener('load', () => {
+          img.classList.add('loaded');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
