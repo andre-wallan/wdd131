@@ -41,3 +41,25 @@ resetBtn.addEventListener('click', () => {
     updateProgress();
   }
 });
+// students.js
+const studentList = document.getElementById('studentList');
+const absentBtn = document.getElementById('absentBtn');
+
+// Array of student items
+const students = Array.from(studentList.children);
+
+// Function to highlight absent students
+function highlightAbsent() {
+  students.forEach(student => {
+    if (student.textContent.includes('Absent')) {
+      student.style.color = 'red';
+      student.style.fontWeight = 'bold';
+    } else {
+      student.style.color = '';
+      student.style.fontWeight = '';
+    }
+  });
+}
+
+// Event listener
+absentBtn.addEventListener('click', highlightAbsent);
